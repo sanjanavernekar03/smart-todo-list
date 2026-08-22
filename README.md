@@ -1,114 +1,133 @@
-# Smart To-Do List 📝
+# 📝 Smart To-Do List
 
-A complete, modern, responsive task management web application built with **Vanilla JavaScript (ES6+)**, **HTML5**, **CSS3**, and **Browser Local Storage**. Designed with a glassmorphism theme, dynamic statistics, dark/light mode toggle, search & filtering, priority/category/due date tags, and smooth micro-interactions.
+A modern, responsive task management web application built with HTML5, CSS3, and Vanilla JavaScript.
 
----
+[🚀 Live Demo](https://sanjanavernekar03.github.io/smart-todo-list/) | [💻 GitHub Repository](https://github.com/sanjanavernekar03/smart-todo-list)
 
-## 🌟 Features
+## ✨ Features
 
-- **Add & Manage Tasks**: Add tasks with Priority (**High**, **Medium**, **Low**), Category (**Personal**, **Work**, **Study**, **Other**), and optional Due Date.
-- **Input Validation**: Prevents empty tasks and duplicate task titles (case-insensitive) with toast notifications.
-- **Task Metadata Badges**: Clear priority badges, category color tags, and due date tags with overdue indicators (`⚠️ Due: [Date]`).
-- **Complete Tasks**: Mark tasks as active/completed with a custom animated checkmark checkbox and line-through styling.
-- **Edit Tasks**: Accessible modal dialog allowing title, priority, category, and due date updates with validation.
-- **Delete Tasks**: Remove individual tasks with smooth slide-out CSS keyframe animations.
-- **Real-Time Search**: Search tasks by title as you type with a clear (`x`) button.
-- **Filter Tabs**: View **All**, **Active**, or **Completed** tasks with visual pill indicators.
-- **Task Statistics**: Dynamic counter cards tracking Total, Active, and Completed tasks in real-time.
-- **Bulk Actions**: Clear Completed tasks or Delete All tasks with a confirmation modal prompt.
-- **Dark & Light Mode**: Persistent theme switcher with high-contrast CSS variable tokens.
-- **Local Storage Persistence**: Auto-saves tasks and theme preference so data survives page reloads and browser restarts.
-- **Responsive & Accessible**: Mobile-first design (tested from 320px up to desktop display) with `:focus-visible` outlines, ARIA roles, and keyboard navigation support.
-
----
+- **Add tasks** — Create tasks with priority, category, and due date.
+- **Edit tasks** — Update existing tasks through a modal dialog.
+- **Delete tasks** — Remove unwanted tasks.
+- **Mark tasks as completed** — Toggle completion with an interactive checkbox.
+- **Prevent empty tasks** — Validate task input.
+- **Prevent duplicate tasks** — Prevent duplicate task titles.
+- **Search tasks** — Search tasks in real time.
+- **All / Active / Completed filters** — Filter tasks dynamically.
+- **Task statistics** — Display total, active, and completed task counts.
+- **Priority levels** — High, Medium, and Low.
+- **Categories** — Personal, Work, Study, and Other.
+- **Due dates** — Assign deadlines to tasks.
+- **Overdue indicators** — Highlight overdue tasks.
+- **Clear completed tasks** — Remove all completed tasks.
+- **Delete all tasks** — Delete all tasks with confirmation.
+- **Local Storage persistence** — Preserve tasks and theme preferences.
+- **Dark / Light mode** — Switch between themes.
+- **Responsive design** — Works across desktop, tablet, and mobile.
+- **Keyboard support** — Enter key and keyboard-friendly controls.
+- **Accessible UI** — ARIA labels and visible focus states.
+- **Toast notifications** — Provide feedback for user actions.
+- **Smooth animations** — Subtle UI transitions and micro-interactions.
 
 ## 🛠️ Technologies Used
 
-- **HTML5**: Semantic tags (`<header>`, `<main>`, `<footer>`, `<section>`, `<form>`) and ARIA accessibility attributes.
-- **CSS3**: Custom CSS Variables, Glassmorphism backdrop filters, Flexbox, Grid, CSS animations (`@keyframes`), and responsive media queries.
-- **Vanilla JavaScript (ES6+)**: ES6 modules/arrow functions, array methods (`map`, `filter`, `find`, `some`), DOM manipulation, and Local Storage API.
-- **No External Frameworks**: 100% pure native web technologies.
-
----
+- HTML5
+- CSS3
+- Vanilla JavaScript (ES6+)
+- Browser Local Storage
 
 ## 📁 Project Structure
 
 ```text
-todo-app/
-├── index.html     # Application HTML5 structure & modals
-├── style.css      # Design system, CSS variables & responsive rules
-├── script.js      # App state, CRUD logic & Local Storage handlers
-├── README.md      # Project documentation
-└── .gitignore     # Git ignore rules
+smart-todo-list/
+├── index.html
+├── style.css
+├── script.js
+├── README.md
+└── .gitignore
 ```
 
----
+### File Explanations
+- **index.html** — Application layout, input form, task list structure, and modal dialogs.
+- **style.css** — Modern styling, glassmorphism design, theme variables, and responsive layouts.
+- **script.js** — Core application state, event listeners, CRUD operations, and Local Storage management.
+- **README.md** — Project documentation and setup guide.
+- **.gitignore** — Ignored files for Git version control.
 
-## 🚀 How to Run Locally
+## 💾 Local Storage
 
-1. **Clone or Download the Repository**:
-   ```bash
-   git clone https://github.com/your-username/smart-todo-app.git
-   cd smart-todo-app
-   ```
+Tasks and theme preferences are saved in browser Local Storage so data persists after refreshing or reopening the browser.
 
-2. **Open in Browser**:
-   - Double-click `index.html` to open it directly in any modern web browser (Chrome, Edge, Firefox, Safari).
-   - *Optionally*, run a simple local static HTTP server:
-     ```bash
-     python -m http.server 8000
-     # Or using Node.js
-     npx serve .
-     ```
-   - Access at `http://localhost:8000`.
+## 📱 Responsive Design
 
----
+The application is optimized for:
+- Desktop
+- Laptop
+- Tablet
+- Mobile
+- Screens as small as 320px
 
-## 💾 How Local Storage Works
+## ♿ Accessibility
 
-- **Saving**: Tasks are stored as a JSON string under the key `'smart_todo_tasks'`:
-  ```javascript
-  localStorage.setItem('smart_todo_tasks', JSON.stringify(tasks));
-  ```
-- **Loading**: On app launch, `loadTasks()` fetches and parses the data inside a `try...catch` block:
-  ```javascript
-  const data = JSON.parse(localStorage.getItem('smart_todo_tasks'));
-  ```
-- **Theme**: User theme preference is preserved separately under `'smart_todo_theme'`.
+- Keyboard navigation
+- Focus-visible states
+- ARIA landmarks
+- Accessible form controls
+- Escape key support for modals
+- Reduced-motion support
 
----
+## 🎨 UI/UX
 
-## 💡 Main JavaScript Concepts Demonstrated
+- Glassmorphism-inspired cards
+- Light and dark themes
+- Responsive layout
+- Smooth animations
+- Toast notifications
+- Empty states
 
-1. **DOM Manipulation & XSS Prevention**: Creating elements programmatically with `document.createElement` and using `textContent` for user inputs to prevent HTML injection.
-2. **State-Driven Rendering**: Single source of truth array (`tasks`) triggering dynamic UI updates (`render()`).
-3. **Array Methods**: Heavy usage of `filter`, `map`, `find`, and `some` for search, filtering, status toggles, and duplicate checking.
-4. **Event Delegation & Listeners**: Managing click, submit, input, and keyboard Escape events cleanly.
-5. **Modal & Dialog Management**: Custom modal backdrops handling open/close states and backdrop clicks.
+## 🚀 Getting Started
 
----
+1. Clone the repository:
+```bash
+git clone https://github.com/sanjanavernekar03/smart-todo-list.git
+```
+2. Open the project folder.
+3. Open `index.html` in a web browser.
 
-## 🖼️ Screenshots
+## 📸 Screenshots
 
-*(Add your screenshots here for portfolio presentation)*
+Screenshots will be added here. Placeholders for previews:
+- Desktop view
+- Dark mode
+- Mobile view
+- Task management
 
-| Dark Theme | Light Theme |
-| :---: | :---: |
-| ![Dark Theme Placeholder](https://via.placeholder.com/600x350/0f172a/ffffff?text=Smart+To-Do+Dark+Mode) | ![Light Theme Placeholder](https://via.placeholder.com/600x350/f8fafc/0f172a?text=Smart+To-Do+Light+Mode) |
+## 🧠 JavaScript Concepts Demonstrated
 
----
+- DOM manipulation
+- Event listeners
+- Arrays and objects
+- Array methods
+- CRUD operations
+- Local Storage
+- Search and filter logic
+- Form validation
+- Dynamic rendering
+- Modular functions
 
 ## 🔮 Future Improvements
 
-- **Drag-and-Drop Reordering**: Manual task sorting via HTML5 Drag & Drop API.
-- **Category Filter Dropdown**: Filter task list specifically by Personal, Work, Study, or Other categories.
-- **Sub-tasks / Checklists**: Support for nested sub-tasks within a task item.
-- **Export & Import JSON**: Backup and restore task data via file download/upload.
-- **Progressive Web App (PWA)**: Service Worker and Web App Manifest integration for offline installation.
-
----
+*(Future enhancement ideas)*
+- Drag-and-drop task ordering
+- Category filtering
+- Subtasks
+- Backend/cloud synchronization
+- User authentication
+- React version
+- PWA support
 
 ## 👩‍💻 Author
 
-- Built as a modern portfolio/interview project demonstrating clean Vanilla JavaScript architecture.
-- License: MIT
+**Sanjana Vernekar**
+
+[GitHub Profile](https://github.com/sanjanavernekar03)
