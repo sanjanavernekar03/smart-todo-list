@@ -96,11 +96,17 @@ git clone https://github.com/sanjanavernekar03/smart-todo-list.git
 
 ## 📸 Screenshots
 
-Screenshots will be added here. Placeholders for previews:
-- Desktop view
-- Dark mode
-- Mobile view
-- Task management
+### 🖥️ Desktop — Light Mode
+
+![Desktop Light Mode](screenshots/desktop-light.png)
+
+### 🌙 Desktop — Dark Mode
+
+![Desktop Dark Mode](screenshots/desktop-dark.png)
+
+### 📱 Mobile Responsive Design
+
+![Mobile View](screenshots/mobile.png)
 
 ## 🧠 JavaScript Concepts Demonstrated
 
