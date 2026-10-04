@@ -2,7 +2,7 @@
 
 A modern, responsive task management web application built with **HTML5, CSS3, and Vanilla JavaScript**.
 
-[🚀 Live Demo](https://sanjanavernekar03.github.io/smart-todo-list/) | [💻 GitHub Repository](https://github.com/sanjanavernekar03/smart-todo-list)
+[🚀 Live Demo](https://smart-todo-list-project-sanjana.netlify.app/) | [💻 GitHub Repository](https://github.com/sanjanavernekar03/smart-todo-list)
 
 ## ✨ Features
 
@@ -150,4 +150,4 @@ Click the links below to view the full-size screenshots:
 
 **Sanjana Vernekar**
 
-[GitHub Profile](https://github.com/sanjanavernekar03)
+[GitHub Profile](https://github.com/sanjanavernekar03) | [LinkedIn Profile](https://linkedin.com/in/sanjanavernekar03)
